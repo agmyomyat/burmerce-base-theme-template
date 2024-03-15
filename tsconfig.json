@@ -8,6 +8,13 @@
     "**/.client/**/*.tsx"
   ],
   "compilerOptions": {
+    "plugins": [
+      {
+        "name": "@0no-co/graphqlsp",
+        "schema": "https://readonlydemo.vendure.io/shop-api",
+        "tadaOutputLocation": "./graphql-env.ts"
+      }
+    ],
     "lib": ["DOM", "DOM.Iterable", "ES2022"],
     "types": ["@remix-run/node", "vite/client"],
     "isolatedModules": true,
