@@ -9,6 +9,7 @@ import {
   Scripts,
   ScrollRestoration,
 } from '@remix-run/react'
+import { theme } from './lib/mantine/theme'
 // import { LinksFunction } from '@remix-run/node'
 
 // export const links: LinksFunction = () => [{ rel: 'stylesheet', href: styles }]
@@ -24,7 +25,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <ColorSchemeScript />
       </head>
       <body>
-        <MantineProvider>
+        <MantineProvider theme={theme}>
           {children}
           <ScrollRestoration />
           <Scripts />
